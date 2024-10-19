@@ -1,0 +1,22 @@
+READ
+JUMP.EQ.0 L1
+jump.gt.o LOOP
+jump make_positive
+
+LOOP:
+PUSH 2
+SUB
+JUMP.EQ.0 L1
+JUMP.GT.0 LOOP
+PRINT odd
+HALT
+
+L1:
+PRINT even
+HALT
+
+make_positive:
+push 2
+add
+jump.gt.0 LOOP
+jump make_positive
